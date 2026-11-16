@@ -1,0 +1,13 @@
+# 这张名单里的每一行都是一种「不要记录」的规则 
+.env # 真实密钥放这里，不能进版本库 
+*.key # 所有后缀为 key 的文件都排除 
+target/ # Java 编译产物目录 
+__pycache__/ # Python 运行后生成的缓存目录 
+*.pyc # Python 字节码文件 
+node_modules/ # 前端第三方包目录 
+dist/ # 前端打包产物 
+.idea/ # IntelliJ IDEA 的工程设置 
+*.iml # 两个 JetBrains 工具生成的模块描述文件 
+.vscode/ # VS Code 的工程设置 
+*.log # 运行日志 
+.DS_Store # 系统生成的缩略图记录 
