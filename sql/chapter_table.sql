@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS chapter (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    subject_id BIGINT NOT NULL COMMENT '学科编号',
+    name VARCHAR(50) NOT NULL COMMENT '章节名称',
+    sort INT NOT NULL DEFAULT 0,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_chapter (subject_id, name),
+    KEY idx_chapter_subject (subject_id)
+) ENGINE=InnoDB COMMENT='章节';

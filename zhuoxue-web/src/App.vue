@@ -1,20 +1,11 @@
+<script setup lang="ts"></script>
+
 <template>
-  <div class="login-box">
-    <h1>琢学</h1>
-    <p>登录页占位</p>
-  </div>
+  <h1>You did it!</h1>
+  <p>
+    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
+    documentation
+  </p>
 </template>
 
-<script setup lang="ts">
-</script>
-
-<style scoped>
-.login-box {
-  margin: 80px auto;
-  text-align: center;
-  font-family: "Microsoft YaHei", sans-serif;
-}
-h1 {
-  color: #2563eb;
-}
-</style>
+<style scoped></style>
