@@ -1,0 +1,48 @@
+# ---------- 服务器配置 ----------
+server:
+  port: 8080
+
+# ---------- Spring 相关配置 ----------
+spring:
+  application:
+    name: zhuoxue-api
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+  datasource:
+    # 数据库连接地址，格式：jdbc:mysql://主机:端口/库名?参数
+    url: jdbc:mysql://your-db-host:3306/zhuoxue?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: your-db-username
+    password: your-db-password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      # 本地 Redis 没设置密码时留空即可
+      password:
+
+# ---------- JWT（登录 token）配置 ----------
+jwt:
+  # 签名密钥：必须足够长（建议 64 位十六进制字符串）且保密
+  secret: change-me-to-a-long-random-secret
+  access-expire-minutes: 120
+
+# ---------- 阿里云短信配置 ----------
+aliyun:
+  sms:
+    access-key-id: your-aliyun-access-key-id
+    access-key-secret: your-aliyun-access-key-secret
+
+# ---------- MinIO 对象存储配置 ----------
+minio:
+  endpoint: your-minio-endpoint
+  access-key: your-minio-access-key
+  secret-key: your-minio-secret-key
+  bucket: your-bucket-name
+  public-domain: your-minio-public-domain
+  max-size-mb: 2
